@@ -31,7 +31,10 @@ const populateTodos = () => {
 
   //loop through array to populate dom with each items title
   for (let index = 0; index < arrayOfTodos.length; index++) {
-     //created list item
+    const complete = arrayOfTodos[index].completed
+    console.log('complete', arrayOfTodos[index], complete)
+    
+    //created list item
     var listItem = document.createElement('li');
     //get array in title
     const elementTitle = arrayOfTodos[index].title
