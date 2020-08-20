@@ -48,3 +48,28 @@ const populateTodos = () => {
     ol.appendChild(listItem)
   }
 }
+
+const populateUserSelection = () => {
+  const inputElement = document.getElementsByTagName('input')
+  let inputValue = inputElement[0].value
+  console.log ('inputValue', inputValue)
+
+  //clear array
+  //filter out the userID of the number in the input
+  //store the new array 
+    todoByUserId = arrayOfTodos.filter(todo => {
+    console.log('todo.userId:', todo.userId)
+    if (todo.userId == inputValue){
+      return todo 
+    }
+  })
+  let what = arrayOfTodos.filter(todo => todo.userId == inputValue)
+  console.log('what', what)
+  console.log('todoByUserId', todoByUserId)
+  
+}
+
+const removeTodos = () => [
+  //remove todos
+  //show todos that are either complete 
+]
