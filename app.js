@@ -20,6 +20,13 @@ const fetchTodos = () => {
   .then( (json) => arrayOfTodos = json)
 }
 
+// function fetchTodos () {
+//   fetch('')
+//   .then(response => {
+//     return.response.json
+//   })
+// }
+
 const logTodos = () => {
   console.log(arrayOfTodos)
 }
@@ -63,13 +70,21 @@ const populateUserSelection = () => {
       return todo 
     }
   })
-  let what = arrayOfTodos.filter(todo => todo.userId == inputValue)
-  console.log('what', what)
-  console.log('todoByUserId', todoByUserId)
-  
-}
 
-const removeTodos = () => [
+let filteredTodos = arrayOfTodos.filter(todo => todo.userId === parseInt(inputValue))
+    console.log('filteredTodos', filteredTodos)
+  
+
+const removeTodos = () => {
   //remove todos
   //show todos that are either complete 
-]
+  var isComplete = arrayOfTodos[index].completed;
+    for (let index = 0; index < 20; index++) {
+      if (isComplete){
+        (listItem.style.backgroundColor = "#66BB55")
+    }
+    else{
+      (listItem.style.backgroundColor = "#FF0120")
+    }
+  } 
+}
